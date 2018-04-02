@@ -203,6 +203,10 @@
           </div>
         </li>
         <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#registerModal">
+            <i class="fa fa-fw fa-user-plus"></i> Cadastro</a>
+        </li>
+        <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Pesquisar eventos...">
@@ -215,7 +219,7 @@
           </form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
             <i class="fa fa-fw fa-sign-out"></i>Encerrar sessão</a>
         </li>
       </ul>
@@ -854,11 +858,11 @@
       <i class="fa fa-angle-up"></i>
     </a>
     <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Deseja sair?</h5>
+            <h5 class="modal-title" id="logoutModalLabel">Deseja sair?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
@@ -866,6 +870,55 @@
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
             <a class="btn btn-primary" href="login.html">Sair</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Register Modal-->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding:7%; width: 150%">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Criar conta</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-footer" style="padding-right:4%">
+            <form>
+              <div class="form-group">
+                <label for="InputEmail">Nome Completo*</label>
+                <input class="form-control" id="InputName" type="text" aria-describedby="nameHelp" placeholder="Nome + sobrenome">
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-md-7">
+                    <label for="InputName">Email</label>
+                    <input class="form-control" id="InputEmail" type="email" aria-describedby="emailHelp" placeholder="email@exemplo.com">
+                  </div>
+                  <div class="col-md-5">
+                    <label for="InputLastName">CPF*</label>
+                    <input class="form-control" id="InputCPF" type="text" aria-describedby="CPFHelp" placeholder="Seu CPF">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <label for="InputPassword">Senha</label>
+                    <input class="form-control" id="InputPassword1" type="password" placeholder="Senha">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="ConfirmPassword">Confirmar senha</label>
+                    <input class="form-control" id="ConfirmPassword" type="password" placeholder="Re-digite a senha">
+                  </div>
+                </div>
+              </div>
+              <p><small style="font-size:.9em"><i>*Nome e CPF serão impressos nos certificados de participação.</i></small></p>
+              <p><small style="font-size:.9em">Ao clicar em Registrar, você está concordando com os Termos de Licença e Uso disponíveis <a href="../about.html">aqui</a>.</small></p>
+              <a class="btn btn-primary btn-block" href="login.html">Registrar</a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
